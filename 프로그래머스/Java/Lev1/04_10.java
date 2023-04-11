@@ -3,7 +3,7 @@
  * 
  * https://school.programmers.co.kr/learn/courses/30/lessons/12937
  * 정답: O
- * 난이도: 극하
+ * 난이도: 하
  */
 
 //내 풀이 
