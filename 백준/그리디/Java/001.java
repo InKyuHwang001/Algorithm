@@ -29,8 +29,12 @@ class Solution{
                 // 종료시간을 오름 차순으로 정렬
                 return o1[1] - o2[1];
             }
-
         });
+
+        // Arrays.sort(time, (a, b) -> {
+		// 	if(a[1] == b[1]) return a[0] - b[0];
+		// 	return a[1] - b[1];
+		// });
         
         int count = 0;
         int prev_end_time = 0;
