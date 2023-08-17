@@ -1,4 +1,4 @@
-#소트인사이드
+#1427 소트인사이드
 ##
 arr = list(input())
 arr.sort(reverse=True)
