@@ -1,16 +1,20 @@
+from heapq import heappop, heappush
 def solution(n, costs):
-    answer = 0
-    costs.sort(key = lambda x: x[2]) 
-    link = set([costs[0][0]])
-    cnt = 0
-    while len(link) != n:
-        for v in costs:
-            cnt+=1
-            if v[0] in link and v[1] in link:
-                continue
-            if v[0] in link or v[1] in link:
-                link.update([v[0], v[1]])
-                answer += v[2]
-                break
-                
-    return answer
+    ans = 0
+    cost_all = [[]for _ in range(n)]
+    chk = [False] * n
+    heap = []
+    heappush(heap,[0,0])
+    
+    for s, e, w in costs:
+        cost_all[s].append([w,e])
+        cost_all[e].append([w,s])
+        
+    while heap:
+        w, s =heappop(heap)
+        if chk[s] == False:
+            chk[s] = True
+            ans += w
+            for cost in cost_all[s]:
+                heappush(heap, cost)
+    return ans
