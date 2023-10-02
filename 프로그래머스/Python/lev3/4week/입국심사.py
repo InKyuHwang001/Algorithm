@@ -6,8 +6,6 @@ def solution(n, times):
         tmp = 0
         for time in times:
             tmp += m // time
-            if tmp >= n:
-                break
         if tmp >= n:
             answer = m
             r = m - 1
