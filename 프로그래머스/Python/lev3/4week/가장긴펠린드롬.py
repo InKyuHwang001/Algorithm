@@ -8,6 +8,5 @@ def solution(s):
             new_s = s[i:j]
             #뒤집었을 때에도 같으면 팰린드롬
             if new_s == new_s[::-1]:
-            	#answer 값 갱신
                 answer = max(answer, len(new_s))
     return answer
