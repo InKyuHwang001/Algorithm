@@ -1,7 +1,7 @@
 n = int(input())
 
 ans = 0
-row = [0] * n
+row = [-1] * n
 
 def is_promising(x):
     for i in range(x):
@@ -22,6 +22,6 @@ def n_queens(x):
             row[x] = i
             if is_promising(x):
                 n_queens(x+1)
-
+            row[x] = -1
 n_queens(0)
 print(ans)
