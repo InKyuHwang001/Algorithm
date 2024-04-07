@@ -1,3 +1,6 @@
+# 2차원은 1차원으로 축소하여 표현이 가능하다.
+
+
 n = int(input())
 
 ans = 0
@@ -24,4 +27,23 @@ def n_queens(x):
                 n_queens(x+1)
             row[x] = -1
 n_queens(0)
+print(ans)
+
+###################################
+
+from itertools import permutations
+N = int(input())
+
+candidates =list(permutations(range(8)))
+def check(arr):
+  alen = len(arr)
+  for i in range(alen):
+    for j in range(i+1,alen):
+      if abs(arr[i] - arr[j]) ==  abs(i-j):
+        return False
+  return True
+ans = 0
+for candi in candidates:
+  if check(candi):
+    ans+=1
 print(ans)

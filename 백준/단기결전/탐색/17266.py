@@ -1,4 +1,3 @@
-
 N = int(input())
 M = int(input())
 nums = list(map(int, input().split()))
