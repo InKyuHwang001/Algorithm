@@ -19,6 +19,6 @@ while heap:
     chk[en] = True
     rs += w
     for ne in graph[en]:
-      if chk[ne[1]] == False:
+      if chk[ne[1]] == False: #없어도 됨
         heapq.heappush(heap, ne)
 print(rs)
