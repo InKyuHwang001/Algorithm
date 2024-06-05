@@ -5,7 +5,6 @@ n = int(input())
 numbers = list(map(int, input().split()))
 m = int(input())
 
-#dp
 dp = [[0] * n for _ in range(n)]
 
 
